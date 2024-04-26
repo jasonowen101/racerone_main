@@ -1,18 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import AboutPage from './AboutPage';
-import LoginPage from './LoginPage';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import AboutPage from './AboutPage'; // Import the AboutPage component
 
-function App() {
+const App = () => {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={AboutPage} />
-        <Route path="/login" component={LoginPage} />
-        {/* Add more routes for other pages */}
-      </Switch>
+      {/* Route for the AboutPage component */}
+      <Route path="/" exact component={AboutPage} />
     </Router>
   );
-}
+};
 
 export default App;
